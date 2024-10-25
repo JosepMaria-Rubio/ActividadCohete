@@ -5,3 +5,6 @@ enum MoveType{
 	LEFT,
 	RIGHT
 };
+
+const int MaxCapsulas = 10;
+const int MaxCarga = 10000;
