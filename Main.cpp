@@ -1,8 +1,8 @@
-#include "Mapa.h"
+#include "Controller.h"
 
 int main() {
-	Cohete c;
-	bool a = c.AgregarCap(new Capsula);
-	bool correct = c.EliminarCap(1);
-	std::cout << correct;
+	std::srand(std::time(nullptr));
+	Controller c;
+
+	c.Run();
 }

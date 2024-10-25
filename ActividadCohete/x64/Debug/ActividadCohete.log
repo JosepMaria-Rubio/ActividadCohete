@@ -1,2 +1,5 @@
-﻿  Cohete.cpp
-  ActividadCohete.vcxproj -> C:\Users\ness1\source\repos\ActividadCohete\x64\Debug\ActividadCohete.exe
+﻿  Controller.cpp
+  Main.cpp
+C:\Users\ness1\Documents\GitHub\ActividadCohete\Main.cpp(4,22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  ActividadCohete.vcxproj -> C:\Users\ness1\Documents\GitHub\ActividadCohete\x64\Debug\ActividadCohete.exe

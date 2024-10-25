@@ -3,8 +3,12 @@
 Cohete::Cohete(){
 	nombre = "Cohete";
 	destino = "Luna";
-	distancia = 10000000;
+	distancia = 500000;
 	nCapsulas = 5;
+	pos = new int[MaxCoords];
+	for (int i = 0; i < MaxCoords; i++) {
+		pos[i] = rand()/((RAND_MAX + 1u)/10);
+	}
 	for (int i = 0; i < MaxCapsulas; i++) {
 		if (i < nCapsulas) {
 			capsulas[i] = new Capsula();
@@ -20,7 +24,10 @@ Cohete::Cohete(std::string nombre, std::string destino, int distancia, int nCaps
 	this->destino = destino;
 	this->distancia = distancia;
 	this->nCapsulas = nCapsulas;
-
+	pos = new int[MaxCoords];
+	for (int i = 0; i < MaxCoords; i++) {
+		pos[i] = rand() / ((RAND_MAX + 1u) / 10);
+	}
 	for (int i = 0; i < MaxCapsulas; i++) {
 		if (i < nCapsulas) {
 			capsulas[i] = new Capsula();
@@ -103,16 +110,38 @@ bool Cohete::Viajar(){
 		return false;
 	}
 	int cargaViaje = distancia / 10;
-
-	//for (int i = 0; i < MaxCapsulas; i++) {
-	//
-	//}
+	int i = 0;
+	while (cargaViaje > 0) {
+		if (capsulas[i] != nullptr) {
+			if (cargaViaje >= capsulas[i]->getCarga()) {
+				cargaViaje -= capsulas[i]->getCarga();
+				EliminarCap(i);
+			}
+			else {
+				capsulas[i]->setCarga(capsulas[i]->getCarga() - cargaViaje);
+				cargaViaje = 0;
+			}
+		}
+		i++;
+	}
+	//CapsulasToString();
 	return true;
 }
 
-bool Cohete::Cargar(int energia){
-	return false;
+void Cohete::Cargar(int energia) {
+	for (int i = 0; i < MaxCapsulas; i++) {
+		if (capsulas[i] != nullptr) {
+			if (energia + capsulas[i]->getCarga() > MaxCarga) {
+				capsulas[i]->setCarga(MaxCarga);
+			}
+			else {
+				capsulas[i]->setCarga(energia + capsulas[i]->getCarga());
+			}
+		}
+	}
 }
+
+
 
 bool Cohete::CapsulasFull(){
 	return nCapsulas == MaxCapsulas;
@@ -128,4 +157,17 @@ void Cohete::CapsulasToString() {
 		}
 	}
 	std::cout << "\n";
+}
+
+std::string Cohete::GetNombre() {
+	return nombre;
+}
+
+int* Cohete::GetPos() {
+	return pos;
+}
+
+void Cohete::CambiarPos(int* pos) {
+	this->pos[X] += pos[X];
+	this->pos[Y] += pos[Y];
 }

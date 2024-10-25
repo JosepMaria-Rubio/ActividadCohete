@@ -1,5 +1,8 @@
 #pragma once
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
+
 #include "Capsula.h"
 #include "Utils.h"
 
@@ -11,6 +14,7 @@ class Cohete
 		int distancia;
 		Capsula* capsulas[MaxCapsulas];
 		int nCapsulas;
+		int* pos;
 
 	public:
 		Cohete();
@@ -22,8 +26,11 @@ class Cohete
 		bool ValidarViaje(int dist);
 		void Objetivo(std::string destino, int distancia);
 		bool Viajar();
-		bool Cargar(int energia);
+		void Cargar(int energia);
 		bool CapsulasFull();
 		void CapsulasToString();
+		std::string GetNombre();
+		int* GetPos();
+		void CambiarPos(int* pos);
 };
 
