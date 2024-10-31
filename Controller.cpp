@@ -1,8 +1,7 @@
 #include "Controller.h"
 
-
 void Controller::Run() {
-	Cohete cohetes[MaxCohetes];
+	Cohete cohetes[Mapa::max_cohetes];
 	Mapa mapa(cohetes);
 	bool salir = false;
 	while (!salir) {
@@ -10,7 +9,7 @@ void Controller::Run() {
 		switch (MenuAccionesCohete()) {
 		case ADD:
 			if (cohetes[idCohete].AgregarCap(new Capsula)) {
-				std::cout << "Capsula añadida correctamente\n";
+				std::cout << "Capsula agregada correctamente\n";
 			}
 			else {
 				std::cout <<  "El cohete esta lleno\n";
@@ -44,15 +43,14 @@ void Controller::Run() {
 			if (cohetes[idCohete].Viajar()) {
 				std::cout << "Se ha relizado el viaje\n";
 			}
-			else {
-				std::cout << "El viaje no se puede realizar\n";
-			}
 			break;
 		case DRAW:
 			mapa.DibujarMapa();
 			break;
 		case MOVE:
-			mapa.Mover((MoveType)MenuMover(), &cohetes[idCohete]);
+			if (!mapa.Mover((MoveType)MenuMover(), &cohetes[idCohete])) {
+				std::cout << "No se puede mover en esa direccion\n";
+			}
 			break;
 		case EXIT:
 			salir = true;
@@ -74,7 +72,7 @@ int Controller::MenuElegirCohete(Cohete* cohetes) {
 int Controller::MenuAccionesCohete() {
 	int opcion;
 	std::cout << "Opciones a realizar\n" <<
-		"1. Añadir capsula al cohete\n" <<
+		"1. Agregar capsula al cohete\n" <<
 		"2. Eliminar capsula\n" <<
 		"3. Transferir energia entre cohetes\n" <<
 		"4. Cargar energia\n" <<

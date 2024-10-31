@@ -2,6 +2,8 @@
 #include "Utils.h"
 class Capsula
 {
+	public:
+		const static int max_carga = 10000;
 	private:
 		int carga;
 	public:

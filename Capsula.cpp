@@ -26,7 +26,7 @@ int Capsula::getCarga(){
 
 int Capsula::getNeededCharge()
 {
-	return MaxCarga - carga;
+	return max_carga - carga;
 }
 
 bool Capsula::isEmpty()

@@ -1,10 +1,17 @@
 #pragma once
 #include <math.h>
 #include "Cohete.h"
+
 class Mapa
 {
+	public:
+		const static int max_mapa = 10;
+		const static int max_coords = 2;
+		const static int max_cohetes = 2;
+	
 	private:
-		char mapa[MaxMapa][MaxMapa];
+		char mapa[max_mapa][max_mapa];
+		const static int ascii_offset = 48;
 		
 
 	public:

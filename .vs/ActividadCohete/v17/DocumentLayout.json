@@ -1,12 +1,151 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ness1\\Documents\\GitHub\\ActividadCohete\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Mapa.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|solutionrelative:Mapa.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Cohete.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|solutionrelative:Cohete.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Cohete.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|solutionrelative:Cohete.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Controller.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|solutionrelative:Controller.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Capsula.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|solutionrelative:Capsula.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Capsula.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|solutionrelative:Capsula.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|solutionrelative:Utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21119A4D-B01E-49A0-ADD6-D30093EA5570}|ActividadCohete.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Controller.cpp",
+              "DocumentMoniker": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Controller.cpp",
+              "RelativeDocumentMoniker": "Controller.cpp",
+              "ToolTip": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Controller.cpp",
+              "RelativeToolTip": "Controller.cpp",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-28T15:54:34.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Capsula.h",
+              "DocumentMoniker": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Capsula.h",
+              "RelativeDocumentMoniker": "Capsula.h",
+              "ToolTip": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Capsula.h",
+              "RelativeToolTip": "Capsula.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-28T15:34:19.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Capsula.cpp",
+              "DocumentMoniker": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Capsula.cpp",
+              "RelativeDocumentMoniker": "Capsula.cpp",
+              "ToolTip": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Capsula.cpp",
+              "RelativeToolTip": "Capsula.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-28T15:24:58.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Utils.h",
+              "DocumentMoniker": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Utils.h",
+              "RelativeDocumentMoniker": "Utils.h",
+              "ToolTip": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Utils.h",
+              "RelativeToolTip": "Utils.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-28T15:21:28.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Mapa.cpp",
+              "DocumentMoniker": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Mapa.cpp",
+              "RelativeDocumentMoniker": "Mapa.cpp",
+              "ToolTip": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Mapa.cpp*",
+              "RelativeToolTip": "Mapa.cpp*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-28T15:16:27.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cohete.h",
+              "DocumentMoniker": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Cohete.h",
+              "RelativeDocumentMoniker": "Cohete.h",
+              "ToolTip": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Cohete.h",
+              "RelativeToolTip": "Cohete.h",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-28T15:16:37.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cohete.cpp",
+              "DocumentMoniker": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Cohete.cpp",
+              "RelativeDocumentMoniker": "Cohete.cpp",
+              "ToolTip": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Cohete.cpp",
+              "RelativeToolTip": "Cohete.cpp",
+              "ViewState": "AgIAALAAAAAAAAAAAAAiwLgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-28T15:16:35.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Main.cpp",
+              "RelativeDocumentMoniker": "Main.cpp",
+              "ToolTip": "C:\\Users\\ness1\\source\\repos\\ActividadCohete\\Main.cpp",
+              "RelativeToolTip": "Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-28T15:16:28.633Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

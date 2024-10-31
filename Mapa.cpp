@@ -1,27 +1,27 @@
 #include "Mapa.h"
 
 Mapa::Mapa() {
-	for (int i = 0; i < MaxMapa; i++) {
-		for (int j = 0; j < MaxMapa; j++) {
+	for (int i = 0; i < max_mapa; i++) {
+		for (int j = 0; j < max_mapa; j++) {
 			mapa[i][j] = '-';
 		}
 	}
 }
 
 Mapa::Mapa(Cohete* cohetes) {
-	for (int i = 0; i < MaxMapa; i++) {
-		for (int j = 0; j < MaxMapa; j++) {
+	for (int i = 0; i < max_mapa; i++) {
+		for (int j = 0; j < max_mapa; j++) {
 			mapa[i][j] = '-';
 		}
 	}
-	for (int i = 0; i < MaxCohetes; i++) {
-		mapa[cohetes[i].GetPos()[X]][cohetes[i].GetPos()[Y]] = '0';
+	for (int i = 0; i < max_cohetes; i++) {
+		mapa[cohetes[i].GetPos()[Y]][cohetes[i].GetPos()[X]] = (char) i + ascii_offset + 1;
 	}
 }
 
 void Mapa::DibujarMapa() {
-	for (int i = 0; i < MaxMapa; i++) {
-		for (int j = 0; j < MaxMapa; j++) {
+	for (int i = 0; i < max_mapa; i++) {
+		for (int j = 0; j < max_mapa; j++) {
 			std::cout << mapa[i][j];
 		}
 		std::cout << "\n";
@@ -36,21 +36,24 @@ bool Mapa::ComprobarPos(Cohete* cohetes) {
 }
 
 bool Mapa::Mover(MoveType move, Cohete* cohete) {
-	int* posAnterior = cohete->GetPos();
+	int* posAnterior = new int[max_mapa];
+	posAnterior[X] = cohete->GetPos()[X];
+	posAnterior[Y] = cohete->GetPos()[Y];
+	
 	int coords[2] = {0,0};
 	switch (move) {
 	case UP:
-		if (posAnterior[Y] + 1 > 10) {
-			return false;
-		}
-		coords[Y] = 1;
-		cohete->CambiarPos(coords);
-		break;
-	case DOWN:
 		if (posAnterior[Y] - 1 < 0) {
 			return false;
 		}
 		coords[Y] = -1;
+		cohete->CambiarPos(coords);
+		break;
+	case DOWN:
+		if (posAnterior[Y] + 1 > 10) {
+			return false;
+		}
+		coords[Y] = 1;
 		cohete->CambiarPos(coords);
 		break;
 	case LEFT:
@@ -73,8 +76,9 @@ bool Mapa::Mover(MoveType move, Cohete* cohete) {
 }
 
 void Mapa::ActualizarMapa(int* posAnterior, int* posNueva) {
-	mapa[posAnterior[X]][posAnterior[Y]] = '-';
-	mapa[posNueva[X]][posNueva[Y]] = '0';
+	char cohete = mapa[posAnterior[Y]][posAnterior[X]];
+	mapa[posAnterior[Y]][posAnterior[X]] = '-';
+	mapa[posNueva[Y]][posNueva[X]] = cohete;
 }
 
 int Mapa::Distancia(int* p1, int* p2) {

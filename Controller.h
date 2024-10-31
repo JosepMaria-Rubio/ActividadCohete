@@ -3,6 +3,8 @@
 #include "Mapa.h"
 
 class Controller {
+	public:
+		
 public:
 	void Run();
 
