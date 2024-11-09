@@ -21,6 +21,11 @@ Cohete::Cohete(){
 	}
 }
 
+Cohete::~Cohete() {
+	delete[] capsulas;
+	delete[] pos;
+}
+
 Cohete::Cohete(std::string nombre, std::string destino, int distancia, int nCapsulas){
 	this->nombre = nombre;
 	this->destino = destino;
@@ -40,8 +45,6 @@ Cohete::Cohete(std::string nombre, std::string destino, int distancia, int nCaps
 	}
 }
 
-
-
 bool Cohete::AgregarCap(Capsula* capsula){ 
 	for (int i = 0; i < max_capsulas; i++) {
 		if (capsulas[i] == nullptr) {
@@ -57,20 +60,22 @@ bool Cohete::EliminarCap(int pos){
 	if (capsulas[pos] == nullptr) {
 		return false;
 	}
-	if (!capsulas[pos]->isEmpty()) {
-		for (int i = 0; i < max_capsulas; i++) {
-			if (capsulas[i] != nullptr) {
-				int carga = capsulas[i]->getNeededCharge();
-				capsulas[pos]->ReparteCarga(carga);
-				capsulas[i]->SumaCarga(carga);
-			}
+	for (int i = 0; i < max_capsulas; i++) {
+		if (capsulas[pos]->isEmpty()) {
+			DestruirCapsulas(pos);
+			return true;
+		}
+		if (capsulas[i] != nullptr) {
+			int carga = capsulas[i]->getNeededCharge();
+			capsulas[pos]->ReparteCarga(carga);
+			capsulas[i]->SumaCarga(carga);
 		}
 	}
-	delete capsulas[pos];
-	capsulas[pos] = nullptr;
-	nCapsulas--;
+	DestruirCapsulas(pos);
 	return true;
 }
+
+
 
 bool Cohete::TransferirCap(int pos, Cohete* cohete){
 	if (cohete->CapsulasFull()) {
@@ -141,6 +146,8 @@ bool Cohete::Viajar(){
 	return true;
 }
 
+
+
 void Cohete::Cargar(int energia) {
 	for (int i = 0; i < max_capsulas; i++) {
 		if (capsulas[i] != nullptr) {
@@ -184,4 +191,10 @@ int* Cohete::GetPos() {
 void Cohete::CambiarPos(int* pos) {
 	this->pos[X] += pos[X];
 	this->pos[Y] += pos[Y];
+}
+
+void Cohete::DestruirCapsulas(int pos) {
+	delete capsulas[pos];
+	capsulas[pos] = nullptr;
+	nCapsulas--;
 }

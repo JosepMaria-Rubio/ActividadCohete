@@ -4,18 +4,16 @@
 
 class Controller {
 	public:
-		
-public:
-	void Run();
+		void Run();
 
-private:
-	int MenuElegirCohete(Cohete* cohetes);
-	int MenuAccionesCohete();
-	int MenuMover();
-	int MenuEliminar();
-	int MenuTransferir();
-	int MenuCargar();
-	std::string MenuDestino();
-	int MenuDistancia();
+	private:
+		int MenuElegirCohete(Cohete* cohetes);
+		int MenuAccionesCohete();
+		int MenuMover();
+		int MenuEliminar();
+		int MenuTransferir();
+		int MenuCargar();
+		std::string MenuDestino();
+		int MenuDistancia();
 };
 

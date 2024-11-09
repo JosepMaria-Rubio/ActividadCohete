@@ -1,7 +1,7 @@
 #include "Capsula.h"
 
 Capsula::Capsula(){
-	carga = 10000;
+	carga = max_carga;
 }
 
 Capsula::Capsula(int carga){

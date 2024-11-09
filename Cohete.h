@@ -2,7 +2,6 @@
 #include <iostream>
 
 #include "Capsula.h"
-#include "Utils.h"
 
 class Cohete{
 	public:
@@ -17,11 +16,9 @@ class Cohete{
 		int* pos;
 
 	public:
-
-		
 		Cohete();
+		~Cohete();
 		Cohete(std::string nombre, std::string destino, int distancia, int nCapsulas);
-
 		bool AgregarCap(Capsula* capsula);
 		bool EliminarCap(int pos);
 		bool TransferirCap(int pos, Cohete* cohete);
@@ -35,5 +32,7 @@ class Cohete{
 		std::string GetNombre();
 		int* GetPos();
 		void CambiarPos(int* pos);
+	private:
+		void DestruirCapsulas(int pos);
 };
 

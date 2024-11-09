@@ -36,7 +36,11 @@ bool Mapa::ComprobarPos(Cohete* cohetes) {
 }
 
 bool Mapa::Mover(MoveType move, Cohete* cohete) {
-	int* posAnterior = new int[max_mapa];
+	if(mapa[cohete->GetPos()[Y]][cohete->GetPos()[X]] != '-') {
+		std::cout<<"Espacio ocupado\n";
+		return false;
+	}
+	int posAnterior[max_mapa];
 	posAnterior[X] = cohete->GetPos()[X];
 	posAnterior[Y] = cohete->GetPos()[Y];
 	
@@ -76,13 +80,10 @@ bool Mapa::Mover(MoveType move, Cohete* cohete) {
 }
 
 void Mapa::ActualizarMapa(int* posAnterior, int* posNueva) {
-	char cohete = mapa[posAnterior[Y]][posAnterior[X]];
+	mapa[posNueva[Y]][posNueva[X]] = mapa[posAnterior[Y]][posAnterior[X]];
 	mapa[posAnterior[Y]][posAnterior[X]] = '-';
-	mapa[posNueva[Y]][posNueva[X]] = cohete;
 }
 
 int Mapa::Distancia(int* p1, int* p2) {
 	return std::sqrt(std::pow(p2[X]-p1[X], 2) + std::pow(p2[Y] - p1[Y], 2));
 }
-
-

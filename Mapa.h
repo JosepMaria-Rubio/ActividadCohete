@@ -1,6 +1,8 @@
 #pragma once
 #include <math.h>
 #include "Cohete.h"
+#include "Utils.h"
+
 
 class Mapa
 {
