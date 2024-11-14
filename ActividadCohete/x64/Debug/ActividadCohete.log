@@ -1,9 +1,3 @@
-﻿  Capsula.cpp
-  Cohete.cpp
-  Controller.cpp
-  Main.cpp
-C:\Users\ness1\source\repos\ActividadCohete\Main.cpp(4,22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Mapa.cpp
-C:\Users\ness1\source\repos\ActividadCohete\Mapa.cpp(88,18): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-  Generating Code...
+﻿  Mapa.cpp
+C:\Users\ness1\source\repos\ActividadCohete\Mapa.cpp(85,18): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
   ActividadCohete.vcxproj -> C:\Users\ness1\source\repos\ActividadCohete\x64\Debug\ActividadCohete.exe

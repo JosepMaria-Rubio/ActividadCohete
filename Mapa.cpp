@@ -36,10 +36,6 @@ bool Mapa::ComprobarPos(Cohete* cohetes) {
 }
 
 bool Mapa::Mover(MoveType move, Cohete* cohete) {
-	if(mapa[cohete->GetPos()[Y]][cohete->GetPos()[X]] != '-') {
-		std::cout<<"Espacio ocupado\n";
-		return false;
-	}
 	int posAnterior[max_mapa];
 	posAnterior[X] = cohete->GetPos()[X];
 	posAnterior[Y] = cohete->GetPos()[Y];
@@ -47,37 +43,38 @@ bool Mapa::Mover(MoveType move, Cohete* cohete) {
 	int coords[2] = {0,0};
 	switch (move) {
 	case UP:
-		if (posAnterior[Y] - 1 < 0) {
+		coords[Y] = -1;
+		if (posAnterior[Y] - 1 < 0 || EstaOcupada(cohete, coords)) {
 			return false;
 		}
-		coords[Y] = -1;
 		cohete->CambiarPos(coords);
 		break;
 	case DOWN:
-		if (posAnterior[Y] + 1 > 10) {
+		coords[Y] = 1;
+		if (posAnterior[Y] + 1 > 10 || EstaOcupada(cohete, coords)) {
 			return false;
 		}
-		coords[Y] = 1;
 		cohete->CambiarPos(coords);
 		break;
 	case LEFT:
-		if (posAnterior[X] - 1 < 0) {
+		coords[X] = -1;
+		if (posAnterior[X] - 1 < 0 || EstaOcupada(cohete, coords)) {
 			return false;
 		}
-		coords[X] = -1;
 		cohete->CambiarPos(coords);
 		break;
 	case RIGHT:
-		if (posAnterior[X] + 1 > 10) {
+		coords[X] = 1;
+		if (posAnterior[X] + 1 > 10 || EstaOcupada(cohete, coords)) {
 			return false;
 		}
-		coords[X] = 1;
 		cohete->CambiarPos(coords);
 		break;
 	}
 	ActualizarMapa(posAnterior, cohete->GetPos());
 	return true;
 }
+
 
 void Mapa::ActualizarMapa(int* posAnterior, int* posNueva) {
 	mapa[posNueva[Y]][posNueva[X]] = mapa[posAnterior[Y]][posAnterior[X]];
@@ -86,4 +83,8 @@ void Mapa::ActualizarMapa(int* posAnterior, int* posNueva) {
 
 int Mapa::Distancia(int* p1, int* p2) {
 	return std::sqrt(std::pow(p2[X]-p1[X], 2) + std::pow(p2[Y] - p1[Y], 2));
+}
+
+bool Mapa::EstaOcupada(Cohete* cohete,int * coords) {
+	return mapa[cohete->GetPos()[Y] + coords[Y]][cohete->GetPos()[X] + coords[X]] != '-';
 }

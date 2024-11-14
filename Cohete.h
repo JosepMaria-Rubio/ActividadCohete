@@ -13,7 +13,7 @@ class Cohete{
 		int distancia;
 		Capsula* capsulas[max_capsulas];
 		int nCapsulas;
-		int* pos;
+		int pos[2];
 
 	public:
 		Cohete();

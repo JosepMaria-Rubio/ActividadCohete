@@ -25,5 +25,8 @@ class Mapa
 		bool Mover(MoveType move, Cohete* cohete);
 		void ActualizarMapa(int* posAnterior, int* posNueva);
 		int Distancia(int* p1, int* p2);
+
+	private:
+		bool EstaOcupada(Cohete* cohete, int* coords);
 };
 

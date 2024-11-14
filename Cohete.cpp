@@ -7,9 +7,8 @@ Cohete::Cohete(){
 	destino = "Luna";
 	distancia = 500000;
 	nCapsulas = 5;
-	pos = new int[Mapa::max_coords];
 	for (int i = 0; i < Mapa::max_coords; i++) {
-		pos[i] = rand()/((RAND_MAX + 1u)/10);
+		pos[i] = rand()%10;
 	}
 	for (int i = 0; i < max_capsulas; i++) {
 		if (i < nCapsulas) {
@@ -23,7 +22,6 @@ Cohete::Cohete(){
 
 Cohete::~Cohete() {
 	delete[] capsulas;
-	delete[] pos;
 }
 
 Cohete::Cohete(std::string nombre, std::string destino, int distancia, int nCapsulas){
@@ -31,7 +29,6 @@ Cohete::Cohete(std::string nombre, std::string destino, int distancia, int nCaps
 	this->destino = destino;
 	this->distancia = distancia;
 	this->nCapsulas = nCapsulas;
-	pos = new int[Mapa::max_coords];
 	for (int i = 0; i < Mapa::max_coords; i++) {
 		pos[i] = rand() / ((RAND_MAX + 1u) / 10);
 	}
@@ -87,7 +84,7 @@ bool Cohete::TransferirCap(int pos, Cohete* cohete){
 		return false;
 	}
 	cohete->AgregarCap(new Capsula(capsulas[pos]->getCarga()));
-	EliminarCap(pos);
+	DestruirCapsulas(pos);
 	return true;
 }
 
@@ -132,7 +129,7 @@ bool Cohete::Viajar(){
 		if (capsulas[i] != nullptr) {
 			if (cargaViaje >= capsulas[i]->getCarga()) {
 				cargaViaje -= capsulas[i]->getCarga();
-				EliminarCap(i);
+				DestruirCapsulas(i);
 			}
 			else {
 				capsulas[i]->setCarga(capsulas[i]->getCarga() - cargaViaje);
